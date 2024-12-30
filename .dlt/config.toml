@@ -1,18 +1,11 @@
-# Configuration for dlt
+# put your configuration values here
 
 [runtime]
-log_level = "WARNING"  # System log level of dlt
-dlthub_telemetry = true  # Enable/disable anonymous usage data reporting
+log_level = "WARNING"  # the system log level of dlt
+# use the dlthub_telemetry setting to enable/disable anonymous usage data reporting, see https://dlthub.com/docs/reference/telemetry
+dlthub_telemetry = true
 
 [sources.popola_dlt]
 base_url = "https://eisaelect.co.za/fr/m/eisachad2024"  # The base URL of your API
-username = "mahadi2"  # API authentication username
-password = "Mahadi2024"  # API authentication password
-
-[destination.postgres.credentials]
-drivername = "postgresql"
-database = "eisa"
-username = "root"
-password = "root"
-host = "localhost"
-port = 5432
+username = "mahadi2"  # Add your username for API authentication
+password = "Mahadi2024"  # Add your password for API authentication
