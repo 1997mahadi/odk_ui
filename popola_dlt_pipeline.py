@@ -6,8 +6,10 @@ def load_all_resources(start_date: str) -> None:
         # Create the pipeline
         pipeline = dlt.pipeline(
             pipeline_name="eisa",
-            destination="duckdb",
-            dataset_name="eisa_data"
+            destination="postgres",  # Ensure destination is PostgreSQL
+            dataset_name="eisa_data",
+            export_schema_path="schemas/export",  # Add this line
+            
         )
 
         # Create the data source

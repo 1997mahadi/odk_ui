@@ -1,0 +1,2032 @@
+version: 6
+version_hash: oGKcUIWFMYzn7BZnURkmEGLc6KYkP0Zop9RLkS6Gucw=
+engine_version: 11
+name: eisa
+tables:
+  _dlt_version:
+    columns:
+      version:
+        data_type: bigint
+        nullable: false
+      engine_version:
+        data_type: bigint
+        nullable: false
+      inserted_at:
+        data_type: timestamp
+        nullable: false
+      schema_name:
+        data_type: text
+        nullable: false
+      version_hash:
+        data_type: text
+        nullable: false
+      schema:
+        data_type: text
+        nullable: false
+    write_disposition: skip
+    resource: _dlt_version
+    description: Created by DLT. Tracks schema updates
+  _dlt_loads:
+    columns:
+      load_id:
+        data_type: text
+        nullable: false
+      schema_name:
+        data_type: text
+        nullable: true
+      status:
+        data_type: bigint
+        nullable: false
+      inserted_at:
+        data_type: timestamp
+        nullable: false
+      schema_version_hash:
+        data_type: text
+        nullable: true
+    write_disposition: skip
+    resource: _dlt_loads
+    description: Created by DLT. Tracks completed loads
+  responses_01_ouverture_29_dec:
+    columns:
+      a01__accuracy:
+        data_type: double
+        nullable: true
+      a01__altitude:
+        data_type: double
+        nullable: true
+      a01__latitude:
+        data_type: double
+        nullable: true
+      a01__longitude:
+        data_type: double
+        nullable: true
+      a02:
+        data_type: text
+        nullable: true
+      a08:
+        data_type: text
+        nullable: true
+      a11:
+        data_type: bigint
+        nullable: true
+      a22:
+        data_type: text
+        nullable: true
+      d17:
+        data_type: text
+        nullable: true
+      d18:
+        data_type: text
+        nullable: true
+      d19:
+        data_type: text
+        nullable: true
+      d20:
+        data_type: text
+        nullable: true
+      e02:
+        data_type: text
+        nullable: true
+      i01:
+        data_type: bigint
+        nullable: true
+      i02:
+        data_type: bigint
+        nullable: true
+      i05:
+        data_type: bigint
+        nullable: true
+      i06:
+        data_type: bigint
+        nullable: true
+      k05:
+        data_type: text
+        nullable: true
+      k15:
+        data_type: text
+        nullable: true
+      k16:
+        data_type: text
+        nullable: true
+      k18:
+        data_type: text
+        nullable: true
+      a10_b:
+        data_type: bigint
+        nullable: true
+      a10_d:
+        data_type: text
+        nullable: true
+      c001:
+        data_type: text
+        nullable: true
+      c004:
+        data_type: text
+        nullable: true
+      c007:
+        data_type: text
+        nullable: true
+      c008:
+        data_type: bigint
+        nullable: true
+      c009:
+        data_type: bigint
+        nullable: true
+      c010:
+        data_type: bigint
+        nullable: true
+      c011:
+        data_type: bigint
+        nullable: true
+      c012:
+        data_type: text
+        nullable: true
+      c013:
+        data_type: bigint
+        nullable: true
+      c014:
+        data_type: bigint
+        nullable: true
+      c015:
+        data_type: bigint
+        nullable: true
+      c016:
+        data_type: bigint
+        nullable: true
+      c017:
+        data_type: text
+        nullable: true
+      c018:
+        data_type: text
+        nullable: true
+      c02_a:
+        data_type: text
+        nullable: true
+      c03_a:
+        data_type: text
+        nullable: true
+      d001:
+        data_type: text
+        nullable: true
+      e01_a:
+        data_type: text
+        nullable: true
+      k01_a:
+        data_type: text
+        nullable: true
+      k02_a:
+        data_type: text
+        nullable: true
+      k02_b:
+        data_type: text
+        nullable: true
+      k03_a:
+        data_type: text
+        nullable: true
+      k06_a:
+        data_type: text
+        nullable: true
+      k07_a:
+        data_type: text
+        nullable: true
+      k07_b:
+        data_type: text
+        nullable: true
+      k13_a:
+        data_type: text
+        nullable: true
+      k14_a:
+        data_type: text
+        nullable: true
+      cd001:
+        data_type: text
+        nullable: true
+      foc02:
+        data_type: text
+        nullable: true
+      rdi02:
+        data_type: text
+        nullable: true
+      rdi03:
+        data_type: bigint
+        nullable: true
+      rdi07:
+        data_type: bigint
+        nullable: true
+      rdi033:
+        data_type: text
+        nullable: true
+      redac_pv:
+        data_type: text
+        nullable: true
+      a10_aclos:
+        data_type: text
+        nullable: true
+      form_name:
+        data_type: text
+        nullable: true
+      h_klist_sign:
+        data_type: text
+        nullable: true
+      last_cached:
+        data_type: timestamp
+        nullable: true
+      response_id:
+        nullable: false
+        primary_key: true
+        data_type: text
+      tchad_commu:
+        data_type: text
+        nullable: true
+      tchad_quart:
+        data_type: text
+        nullable: true
+      h_ktoute_pces:
+        data_type: text
+        nullable: true
+      hk_ob_nat_tache:
+        data_type: text
+        nullable: true
+      h_kcompte_voix:
+        data_type: text
+        nullable: true
+      h_kouvert_urne:
+        data_type: text
+        nullable: true
+      h_kscrutateur:
+        data_type: text
+        nullable: true
+      h_ksuffrag_exp:
+        data_type: text
+        nullable: true
+      h_kscrutin_clos:
+        data_type: text
+        nullable: true
+      h_ksuffrag_exp2:
+        data_type: text
+        nullable: true
+      h_kfeuille_point:
+        data_type: text
+        nullable: true
+      h_kbulletin_range:
+        data_type: text
+        nullable: true
+      response_reviewed:
+        data_type: bool
+        nullable: true
+      response_shortcode:
+        data_type: text
+        nullable: true
+      response_submit_date:
+        data_type: timestamp
+        nullable: true
+      response_submitter_name:
+        data_type: text
+        nullable: true
+      _dlt_load_id:
+        data_type: text
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+      c02_b:
+        data_type: bigint
+        nullable: true
+      c02_e:
+        data_type: text
+        nullable: true
+      c03_d:
+        data_type: text
+        nullable: true
+      c08_b:
+        data_type: text
+        nullable: true
+      e01_b:
+        data_type: text
+        nullable: true
+      k01_c:
+        data_type: text
+        nullable: true
+      rdi044:
+        data_type: text
+        nullable: true
+      k01_dh_kpv:
+        data_type: text
+        nullable: true
+      rdi035:
+        data_type: text
+        nullable: true
+      h_kscrutateur2:
+        data_type: bigint
+        nullable: true
+      c005:
+        data_type: text
+        nullable: true
+      rdio43:
+        data_type: text
+        nullable: true
+      rdi036:
+        data_type: text
+        nullable: true
+      rdi037:
+        data_type: text
+        nullable: true
+      rdi051:
+        data_type: text
+        nullable: true
+      rdi032:
+        data_type: text
+        nullable: true
+      rdi046:
+        data_type: text
+        nullable: true
+      rdi045:
+        data_type: text
+        nullable: true
+      k03_b:
+        data_type: text
+        nullable: true
+      rdi039:
+        data_type: text
+        nullable: true
+      h_kfeuille_point3:
+        data_type: text
+        nullable: true
+      rdi041:
+        data_type: text
+        nullable: true
+      rdi040:
+        data_type: text
+        nullable: true
+      rdi048:
+        data_type: text
+        nullable: true
+      rdi042:
+        data_type: text
+        nullable: true
+      rdi038:
+        data_type: text
+        nullable: true
+      rdi030:
+        data_type: text
+        nullable: true
+      a10_aclos1:
+        data_type: text
+        nullable: true
+      rdi029:
+        data_type: text
+        nullable: true
+      k13_c:
+        data_type: text
+        nullable: true
+      h_kouvert_urne2:
+        data_type: text
+        nullable: true
+      rdi050:
+        data_type: text
+        nullable: true
+      rdi047:
+        data_type: text
+        nullable: true
+      rdi034:
+        data_type: text
+        nullable: true
+      rdi031:
+        data_type: text
+        nullable: true
+    write_disposition: merge
+    resource: 'Responses: 01-OUVERTURE 29 DEC'
+  responses_02_deroulement_29_dec:
+    columns:
+      a01__accuracy:
+        data_type: double
+        nullable: true
+      a01__altitude:
+        data_type: double
+        nullable: true
+      a01__latitude:
+        data_type: double
+        nullable: true
+      a01__longitude:
+        data_type: double
+        nullable: true
+      a02:
+        data_type: text
+        nullable: true
+      a08:
+        data_type: text
+        nullable: true
+      a11:
+        data_type: bigint
+        nullable: true
+      a22:
+        data_type: text
+        nullable: true
+      d17:
+        data_type: text
+        nullable: true
+      d18:
+        data_type: text
+        nullable: true
+      d19:
+        data_type: text
+        nullable: true
+      d20:
+        data_type: text
+        nullable: true
+      e02:
+        data_type: text
+        nullable: true
+      i01:
+        data_type: bigint
+        nullable: true
+      i02:
+        data_type: bigint
+        nullable: true
+      i05:
+        data_type: bigint
+        nullable: true
+      i06:
+        data_type: bigint
+        nullable: true
+      k05:
+        data_type: text
+        nullable: true
+      k15:
+        data_type: text
+        nullable: true
+      k16:
+        data_type: text
+        nullable: true
+      k18:
+        data_type: text
+        nullable: true
+      a10_b:
+        data_type: bigint
+        nullable: true
+      a10_d:
+        data_type: text
+        nullable: true
+      c001:
+        data_type: text
+        nullable: true
+      c004:
+        data_type: text
+        nullable: true
+      c007:
+        data_type: text
+        nullable: true
+      c008:
+        data_type: bigint
+        nullable: true
+      c009:
+        data_type: bigint
+        nullable: true
+      c010:
+        data_type: bigint
+        nullable: true
+      c011:
+        data_type: bigint
+        nullable: true
+      c012:
+        data_type: text
+        nullable: true
+      c013:
+        data_type: bigint
+        nullable: true
+      c014:
+        data_type: bigint
+        nullable: true
+      c015:
+        data_type: bigint
+        nullable: true
+      c016:
+        data_type: bigint
+        nullable: true
+      c017:
+        data_type: text
+        nullable: true
+      c018:
+        data_type: text
+        nullable: true
+      c02_a:
+        data_type: text
+        nullable: true
+      c03_a:
+        data_type: text
+        nullable: true
+      d001:
+        data_type: text
+        nullable: true
+      e01_a:
+        data_type: text
+        nullable: true
+      k01_a:
+        data_type: text
+        nullable: true
+      k02_a:
+        data_type: text
+        nullable: true
+      k02_b:
+        data_type: text
+        nullable: true
+      k03_a:
+        data_type: text
+        nullable: true
+      k06_a:
+        data_type: text
+        nullable: true
+      k07_a:
+        data_type: text
+        nullable: true
+      k07_b:
+        data_type: text
+        nullable: true
+      k13_a:
+        data_type: text
+        nullable: true
+      k14_a:
+        data_type: text
+        nullable: true
+      cd001:
+        data_type: text
+        nullable: true
+      foc02:
+        data_type: text
+        nullable: true
+      rdi02:
+        data_type: text
+        nullable: true
+      rdi03:
+        data_type: bigint
+        nullable: true
+      rdi07:
+        data_type: bigint
+        nullable: true
+      rdi033:
+        data_type: text
+        nullable: true
+      redac_pv:
+        data_type: text
+        nullable: true
+      a10_aclos:
+        data_type: text
+        nullable: true
+      form_name:
+        data_type: text
+        nullable: true
+      h_klist_sign:
+        data_type: text
+        nullable: true
+      last_cached:
+        data_type: timestamp
+        nullable: true
+      response_id:
+        nullable: false
+        primary_key: true
+        data_type: text
+      tchad_commu:
+        data_type: text
+        nullable: true
+      tchad_quart:
+        data_type: text
+        nullable: true
+      h_ktoute_pces:
+        data_type: text
+        nullable: true
+      hk_ob_nat_tache:
+        data_type: text
+        nullable: true
+      h_kcompte_voix:
+        data_type: text
+        nullable: true
+      h_kouvert_urne:
+        data_type: text
+        nullable: true
+      h_kscrutateur:
+        data_type: text
+        nullable: true
+      h_ksuffrag_exp:
+        data_type: text
+        nullable: true
+      h_kscrutin_clos:
+        data_type: text
+        nullable: true
+      h_ksuffrag_exp2:
+        data_type: text
+        nullable: true
+      h_kfeuille_point:
+        data_type: text
+        nullable: true
+      h_kbulletin_range:
+        data_type: text
+        nullable: true
+      response_reviewed:
+        data_type: bool
+        nullable: true
+      response_shortcode:
+        data_type: text
+        nullable: true
+      response_submit_date:
+        data_type: timestamp
+        nullable: true
+      response_submitter_name:
+        data_type: text
+        nullable: true
+      _dlt_load_id:
+        data_type: text
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+      c02_b:
+        data_type: bigint
+        nullable: true
+      c02_e:
+        data_type: text
+        nullable: true
+      c03_d:
+        data_type: text
+        nullable: true
+      c08_b:
+        data_type: text
+        nullable: true
+      e01_b:
+        data_type: text
+        nullable: true
+      k01_c:
+        data_type: text
+        nullable: true
+      rdi044:
+        data_type: text
+        nullable: true
+      k01_dh_kpv:
+        data_type: text
+        nullable: true
+      rdi035:
+        data_type: text
+        nullable: true
+      h_kscrutateur2:
+        data_type: bigint
+        nullable: true
+      c005:
+        data_type: text
+        nullable: true
+      rdio43:
+        data_type: text
+        nullable: true
+      rdi036:
+        data_type: text
+        nullable: true
+      rdi037:
+        data_type: text
+        nullable: true
+      rdi051:
+        data_type: text
+        nullable: true
+      rdi032:
+        data_type: text
+        nullable: true
+      rdi046:
+        data_type: text
+        nullable: true
+      rdi045:
+        data_type: text
+        nullable: true
+      k03_b:
+        data_type: text
+        nullable: true
+      rdi039:
+        data_type: text
+        nullable: true
+      h_kfeuille_point3:
+        data_type: text
+        nullable: true
+      rdi041:
+        data_type: text
+        nullable: true
+      rdi040:
+        data_type: text
+        nullable: true
+      rdi048:
+        data_type: text
+        nullable: true
+      rdi042:
+        data_type: text
+        nullable: true
+      rdi038:
+        data_type: text
+        nullable: true
+      rdi030:
+        data_type: text
+        nullable: true
+      a10_aclos1:
+        data_type: text
+        nullable: true
+      rdi029:
+        data_type: text
+        nullable: true
+      k13_c:
+        data_type: text
+        nullable: true
+      h_kouvert_urne2:
+        data_type: text
+        nullable: true
+      rdi050:
+        data_type: text
+        nullable: true
+      rdi047:
+        data_type: text
+        nullable: true
+      rdi034:
+        data_type: text
+        nullable: true
+      rdi031:
+        data_type: text
+        nullable: true
+    write_disposition: merge
+    resource: 'Responses: 02-DEROULEMENT 29 DEC'
+  responses_03_cl_ture_depouillement_29_dec:
+    columns:
+      a01__accuracy:
+        data_type: double
+        nullable: true
+      a01__altitude:
+        data_type: double
+        nullable: true
+      a01__latitude:
+        data_type: double
+        nullable: true
+      a01__longitude:
+        data_type: double
+        nullable: true
+      a02:
+        data_type: text
+        nullable: true
+      a08:
+        data_type: text
+        nullable: true
+      a11:
+        data_type: bigint
+        nullable: true
+      a22:
+        data_type: text
+        nullable: true
+      d17:
+        data_type: text
+        nullable: true
+      d18:
+        data_type: text
+        nullable: true
+      d19:
+        data_type: text
+        nullable: true
+      d20:
+        data_type: text
+        nullable: true
+      e02:
+        data_type: text
+        nullable: true
+      i01:
+        data_type: bigint
+        nullable: true
+      i02:
+        data_type: bigint
+        nullable: true
+      i05:
+        data_type: bigint
+        nullable: true
+      i06:
+        data_type: bigint
+        nullable: true
+      k05:
+        data_type: text
+        nullable: true
+      k15:
+        data_type: text
+        nullable: true
+      k16:
+        data_type: text
+        nullable: true
+      k18:
+        data_type: text
+        nullable: true
+      a10_b:
+        data_type: bigint
+        nullable: true
+      a10_d:
+        data_type: text
+        nullable: true
+      c001:
+        data_type: text
+        nullable: true
+      c004:
+        data_type: text
+        nullable: true
+      c007:
+        data_type: text
+        nullable: true
+      c008:
+        data_type: bigint
+        nullable: true
+      c009:
+        data_type: bigint
+        nullable: true
+      c010:
+        data_type: bigint
+        nullable: true
+      c011:
+        data_type: bigint
+        nullable: true
+      c012:
+        data_type: text
+        nullable: true
+      c013:
+        data_type: bigint
+        nullable: true
+      c014:
+        data_type: bigint
+        nullable: true
+      c015:
+        data_type: bigint
+        nullable: true
+      c016:
+        data_type: bigint
+        nullable: true
+      c017:
+        data_type: text
+        nullable: true
+      c018:
+        data_type: text
+        nullable: true
+      c02_a:
+        data_type: text
+        nullable: true
+      c03_a:
+        data_type: text
+        nullable: true
+      d001:
+        data_type: text
+        nullable: true
+      e01_a:
+        data_type: text
+        nullable: true
+      k01_a:
+        data_type: text
+        nullable: true
+      k02_a:
+        data_type: text
+        nullable: true
+      k02_b:
+        data_type: text
+        nullable: true
+      k03_a:
+        data_type: text
+        nullable: true
+      k06_a:
+        data_type: text
+        nullable: true
+      k07_a:
+        data_type: text
+        nullable: true
+      k07_b:
+        data_type: text
+        nullable: true
+      k13_a:
+        data_type: text
+        nullable: true
+      k14_a:
+        data_type: text
+        nullable: true
+      cd001:
+        data_type: text
+        nullable: true
+      foc02:
+        data_type: text
+        nullable: true
+      rdi02:
+        data_type: text
+        nullable: true
+      rdi03:
+        data_type: bigint
+        nullable: true
+      rdi07:
+        data_type: bigint
+        nullable: true
+      rdi033:
+        data_type: text
+        nullable: true
+      redac_pv:
+        data_type: text
+        nullable: true
+      a10_aclos:
+        data_type: text
+        nullable: true
+      form_name:
+        data_type: text
+        nullable: true
+      h_klist_sign:
+        data_type: text
+        nullable: true
+      last_cached:
+        data_type: timestamp
+        nullable: true
+      response_id:
+        nullable: false
+        primary_key: true
+        data_type: text
+      tchad_commu:
+        data_type: text
+        nullable: true
+      tchad_quart:
+        data_type: text
+        nullable: true
+      h_ktoute_pces:
+        data_type: text
+        nullable: true
+      hk_ob_nat_tache:
+        data_type: text
+        nullable: true
+      h_kcompte_voix:
+        data_type: text
+        nullable: true
+      h_kouvert_urne:
+        data_type: text
+        nullable: true
+      h_kscrutateur:
+        data_type: text
+        nullable: true
+      h_ksuffrag_exp:
+        data_type: text
+        nullable: true
+      h_kscrutin_clos:
+        data_type: text
+        nullable: true
+      h_ksuffrag_exp2:
+        data_type: text
+        nullable: true
+      h_kfeuille_point:
+        data_type: text
+        nullable: true
+      h_kbulletin_range:
+        data_type: text
+        nullable: true
+      response_reviewed:
+        data_type: bool
+        nullable: true
+      response_shortcode:
+        data_type: text
+        nullable: true
+      response_submit_date:
+        data_type: timestamp
+        nullable: true
+      response_submitter_name:
+        data_type: text
+        nullable: true
+      _dlt_load_id:
+        data_type: text
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+      c02_b:
+        data_type: bigint
+        nullable: true
+      c02_e:
+        data_type: text
+        nullable: true
+      c03_d:
+        data_type: text
+        nullable: true
+      c08_b:
+        data_type: text
+        nullable: true
+      e01_b:
+        data_type: text
+        nullable: true
+      k01_c:
+        data_type: text
+        nullable: true
+      rdi044:
+        data_type: text
+        nullable: true
+      k01_dh_kpv:
+        data_type: text
+        nullable: true
+      rdi035:
+        data_type: text
+        nullable: true
+      h_kscrutateur2:
+        data_type: bigint
+        nullable: true
+      c005:
+        data_type: text
+        nullable: true
+      rdio43:
+        data_type: text
+        nullable: true
+      rdi036:
+        data_type: text
+        nullable: true
+      rdi037:
+        data_type: text
+        nullable: true
+      rdi051:
+        data_type: text
+        nullable: true
+      rdi032:
+        data_type: text
+        nullable: true
+      rdi046:
+        data_type: text
+        nullable: true
+      rdi045:
+        data_type: text
+        nullable: true
+      k03_b:
+        data_type: text
+        nullable: true
+      rdi039:
+        data_type: text
+        nullable: true
+      h_kfeuille_point3:
+        data_type: text
+        nullable: true
+      rdi041:
+        data_type: text
+        nullable: true
+      rdi040:
+        data_type: text
+        nullable: true
+      rdi048:
+        data_type: text
+        nullable: true
+      rdi042:
+        data_type: text
+        nullable: true
+      rdi038:
+        data_type: text
+        nullable: true
+      rdi030:
+        data_type: text
+        nullable: true
+      a10_aclos1:
+        data_type: text
+        nullable: true
+      rdi029:
+        data_type: text
+        nullable: true
+      k13_c:
+        data_type: text
+        nullable: true
+      h_kouvert_urne2:
+        data_type: text
+        nullable: true
+      rdi050:
+        data_type: text
+        nullable: true
+      rdi047:
+        data_type: text
+        nullable: true
+      rdi034:
+        data_type: text
+        nullable: true
+      rdi031:
+        data_type: text
+        nullable: true
+    write_disposition: merge
+    resource: 'Responses: 03-CLÔTURE DEPOUILLEMENT 29 DEC'
+  _dlt_pipeline_state:
+    columns:
+      version:
+        data_type: bigint
+        nullable: false
+      engine_version:
+        data_type: bigint
+        nullable: false
+      pipeline_name:
+        data_type: text
+        nullable: false
+      state:
+        data_type: text
+        nullable: false
+      created_at:
+        data_type: timestamp
+        nullable: false
+      version_hash:
+        data_type: text
+        nullable: true
+      _dlt_load_id:
+        data_type: text
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    write_disposition: append
+    file_format: preferred
+    resource: _dlt_pipeline_state
+  responses_02_deroulement_29_dec__a00:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_02_deroulement_29_dec
+  responses_02_deroulement_29_dec__k00:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_02_deroulement_29_dec
+  responses_02_deroulement_29_dec__d00a:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_02_deroulement_29_dec
+  responses_02_deroulement_29_dec__e00a:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_02_deroulement_29_dec
+  responses_02_deroulement_29_dec__k14_b:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_02_deroulement_29_dec
+  responses_02_deroulement_29_dec__stat:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_02_deroulement_29_dec
+  responses_02_deroulement_29_dec__elecom:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_02_deroulement_29_dec
+  responses_02_deroulement_29_dec__elecpro:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_02_deroulement_29_dec
+  responses_02_deroulement_29_dec__eleclegis:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_02_deroulement_29_dec
+  responses_02_deroulement_29_dec__h_ksect3_constat:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_02_deroulement_29_dec
+  responses_02_deroulement_29_dec__c03_c:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_02_deroulement_29_dec
+  responses_02_deroulement_29_dec__h_kfeuille_point2:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_02_deroulement_29_dec
+  responses_02_deroulement_29_dec__k13_b:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_02_deroulement_29_dec
+  responses_01_ouverture_29_dec__a00:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_01_ouverture_29_dec
+  responses_01_ouverture_29_dec__k00:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_01_ouverture_29_dec
+  responses_01_ouverture_29_dec__d00a:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_01_ouverture_29_dec
+  responses_01_ouverture_29_dec__e00a:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_01_ouverture_29_dec
+  responses_01_ouverture_29_dec__k14_b:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_01_ouverture_29_dec
+  responses_01_ouverture_29_dec__stat:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_01_ouverture_29_dec
+  responses_01_ouverture_29_dec__elecom:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_01_ouverture_29_dec
+  responses_01_ouverture_29_dec__elecpro:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_01_ouverture_29_dec
+  responses_01_ouverture_29_dec__eleclegis:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_01_ouverture_29_dec
+  responses_01_ouverture_29_dec__h_ksect3_constat:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_01_ouverture_29_dec
+  responses_01_ouverture_29_dec__c03_c:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_01_ouverture_29_dec
+  responses_01_ouverture_29_dec__h_kfeuille_point2:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_01_ouverture_29_dec
+  responses_01_ouverture_29_dec__k13_b:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_01_ouverture_29_dec
+  responses_03_cl_ture_depouillement_29_dec__a00:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_03_cl_ture_depouillement_29_dec
+  responses_03_cl_ture_depouillement_29_dec__k00:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_03_cl_ture_depouillement_29_dec
+  responses_03_cl_ture_depouillement_29_dec__d00a:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_03_cl_ture_depouillement_29_dec
+  responses_03_cl_ture_depouillement_29_dec__e00a:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_03_cl_ture_depouillement_29_dec
+  responses_03_cl_ture_depouillement_29_dec__k14_b:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_03_cl_ture_depouillement_29_dec
+  responses_03_cl_ture_depouillement_29_dec__stat:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_03_cl_ture_depouillement_29_dec
+  responses_03_cl_ture_depouillement_29_dec__elecom:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_03_cl_ture_depouillement_29_dec
+  responses_03_cl_ture_depouillement_29_dec__elecpro:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_03_cl_ture_depouillement_29_dec
+  responses_03_cl_ture_depouillement_29_dec__eleclegis:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_03_cl_ture_depouillement_29_dec
+  responses_03_cl_ture_depouillement_29_dec__h_ksect3_constat:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_03_cl_ture_depouillement_29_dec
+  responses_03_cl_ture_depouillement_29_dec__c03_c:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_03_cl_ture_depouillement_29_dec
+  responses_03_cl_ture_depouillement_29_dec__h_kfeuille_point2:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_03_cl_ture_depouillement_29_dec
+  responses_03_cl_ture_depouillement_29_dec__k13_b:
+    columns:
+      value:
+        data_type: text
+        nullable: true
+      _dlt_root_id:
+        data_type: text
+        nullable: false
+        root_key: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        parent_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+        row_key: true
+    parent: responses_03_cl_ture_depouillement_29_dec
+settings:
+  detections:
+  - iso_timestamp
+  default_hints:
+    not_null:
+    - _dlt_id
+    - _dlt_root_id
+    - _dlt_parent_id
+    - _dlt_list_idx
+    - _dlt_load_id
+    parent_key:
+    - _dlt_parent_id
+    root_key:
+    - _dlt_root_id
+    unique:
+    - _dlt_id
+    row_key:
+    - _dlt_id
+normalizers:
+  names: snake_case
+  json:
+    module: dlt.common.normalizers.json.relational
+    config:
+      max_nesting: 1
+      propagation:
+        tables:
+          responses_01_ouverture_29_dec:
+            _dlt_id: _dlt_root_id
+          responses_02_deroulement_29_dec:
+            _dlt_id: _dlt_root_id
+          responses_03_cl_ture_depouillement_29_dec:
+            _dlt_id: _dlt_root_id
+previous_hashes:
+- hrT+Kx0hsoEo4LKPhdyfIH8rFk978yxilgSXlI8eR38=
+- JWoKlT1IdUOyjmeMN//8shlebII48vpE1XYrQDIW/G0=
+- ahVq+CTgFcQOLyMb0Q9IUQGdZIpim2yfVzoXFSuI7Nw=
+- ufabUJonSVfGrU32nw/eTsVdUY/XZdIOoQRMWzQVRAg=
+- caAoUId9aAk1fZlasvEV3x2W+UbwPfUkZAzRIfx/Fxw=
+- n3Hklw9MycCVYQD0BND04NfjqxJfFiWwSUP+NrC/S0o=

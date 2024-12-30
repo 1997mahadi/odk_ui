@@ -1,5 +1,6 @@
 # ignore secrets, virtual environments and typical python compilation artifacts
 secrets.toml
+config.toml
 # ignore basic python artifacts
 .env
 **/__pycache__/
@@ -7,4 +8,4 @@ secrets.toml
 **/*$py.class
 # ignore duckdb
 *.duckdb
-*.wal
+*.waleisa_postgres_data/
