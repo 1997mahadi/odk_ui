@@ -3,6 +3,7 @@ from typing import Iterable, Optional
 from dlt.sources import DltResource
 from .helpers import EisaApi
 
+
 @dlt.source(name="eisa", max_table_nesting=0)
 def eisa_source(
     access_token: Optional[str] = dlt.secrets.value,
@@ -39,7 +40,7 @@ def eisa_source(
             @dlt.resource(name=resource_name, primary_key="ResponseID", write_disposition="merge", max_table_nesting=0)
             def dynamic_resource() -> Iterable:
                 """
-                Fetch paginated data from the resource and yield as rows.
+                Fetch paginated and preprocessed data from the resource and yield as rows.
                 """
                 # Parameters for fetching data
                 params = {}
@@ -48,7 +49,7 @@ def eisa_source(
                 if "ResponseSubmitDate" in resource_url:
                     params["$orderby"] = "ResponseSubmitDate asc"
 
-                # Fetch data using pagination
+                # Fetch data using pagination (already flattened)
                 for page in client.get_pages(resource_url, params):
                     yield from page
 

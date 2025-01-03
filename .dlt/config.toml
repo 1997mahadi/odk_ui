@@ -9,3 +9,4 @@ dlthub_telemetry = true
 base_url = "https://eisaelect.co.za/fr/m/eisachad2024"  # The base URL of your API
 username = "mahadi2"  # Add your username for API authentication
 password = "Mahadi2024"  # Add your password for API authentication
+

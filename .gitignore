@@ -9,3 +9,4 @@ config.toml
 # ignore duckdb
 *.duckdb
 *.waleisa_postgres_data/
+eisa_postgres_data/

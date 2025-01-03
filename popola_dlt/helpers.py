@@ -33,14 +33,63 @@ class EisaApi:
         return {item["name"]: item["url"] for item in data.get("value", [])}
 
     def get_pages(self, resource: str, params: Optional[Dict[str, Any]] = None) -> Iterable[TDataItems]:
-        """Fetch paginated data from the EISA API."""
+        """Fetch paginated data from the EISA API and flatten nested structures."""
+
+        def flatten_and_process_data(data):
+            """
+            Flattens nested data and ensures follow-up responses are integrated into a single column.
+
+            Args:
+                data (dict): A dictionary representing a single row of data.
+
+            Returns:
+                dict: A flattened and processed dictionary.
+            """
+            def flatten_json(data, parent_key='', sep='__'):
+                """
+                Flattens a nested dictionary into a single level.
+
+                :param data: The dictionary to flatten
+                :param parent_key: The base key to append to
+                :param sep: Separator to use between keys
+                :return: A flattened dictionary
+                """
+                items = []
+                for key, value in data.items():
+                    new_key = f"{parent_key}{sep}{key}" if parent_key else key
+                    if isinstance(value, dict):
+                        items.extend(flatten_json(value, new_key, sep=sep).items())
+                    else:
+                        items.append((new_key, value))
+                return dict(items)
+
+            # Flatten the row (if nested)
+            flat_row = flatten_json(data)
+
+            # Handle conditional logic
+            primary_question = "environment_peaceful"
+            follow_up_question = "response_if_no"
+
+            if flat_row.get(primary_question) == "No":
+                follow_up_response = flat_row.pop(follow_up_question, {})
+                if isinstance(follow_up_response, dict):
+                    concatenated_response = "\\".join(
+                        [f"{k}: {v}" for k, v in follow_up_response.items() if v]
+                    )
+                    flat_row[follow_up_question] = concatenated_response
+                else:
+                    flat_row[follow_up_question] = follow_up_response
+
+            return flat_row
+
         url = f"{self.base_url}/odata/v1/{resource}"
         while url:
             try:
                 response = requests.get(url, params=params, auth=(self.username, self.password))
                 response.raise_for_status()
                 json_data = response.json()
-                yield json_data.get("value", [])
+                for item in json_data.get("value", []):
+                    yield flatten_and_process_data(item)  # Flatten and process data before yielding
                 url = json_data.get("@odata.nextLink")
             except Exception as e:
-                break
+                raise EisaApiError(f"Error fetching data from {url}: {e}")
